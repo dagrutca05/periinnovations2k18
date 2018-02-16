@@ -1,16 +1,16 @@
 import random
 def create():
   person = {
-    'hp': 200,
-    'damage': 30,
-    "defend":  3
+    'hp': 250,
+    'damage': 35,
+    "defend":  5
   }
   
   person['name'] = input('Введите имя персонажа: ')
   cho = int(input("""Выберите класс
-  1 -Reaper 
-  2-Gorilla
-  3-Mage
+  1 -Foresta
+  2-Begemotic
+  3-Max
 """))
   if cho == 1:
     person['hp'] += 50  
@@ -24,8 +24,8 @@ def create():
   
   armor = int(input("""Выбирети броню
   1 - spetsnaz
-  2 - swat
-  3 - military 
+  2 - FBR
+  3 - super brona 
 """)) 
   if armor == 1:
     person["defend"] += 10
@@ -39,8 +39,8 @@ def create():
   
   gune = int(input("""Выберите оружее
   1 - AK-47
-  2 - Драгунов
-  3 - BBC Винтарез
+  2 - Иггрушечный пистолет
+  3 - Водный пистолет
 """))
   if gune == 1:
     person["damage"] += 13
@@ -74,10 +74,10 @@ while True:
   health_info(player_2)
 
   if player_2['hp'] <= 0:
-    print(player_2['name'], 'сдох')
+    print(player_2['name'], 'умер')
     break
 
   if player_1['hp'] <= 0:
-    print(player_1['name'], 'сдох')
+    print(player_1['name'], 'умер')
     break
   input()
